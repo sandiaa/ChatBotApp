@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let vc = ChatViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.isNavigationBarHidden = true
+        window?.rootViewController = nav
         // Override point for customization after application launch.
         return true
     }

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8419CD8F21E46E1D00A67558 /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8419CD8E21E46E1D00A67558 /* NunitoSans-SemiBold.ttf */; };
+		8419CD9221E48E3800A67558 /* AllSuggestionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419CD9021E48E3800A67558 /* AllSuggestionsCell.swift */; };
+		8419CD9321E48E3800A67558 /* AllSuggestionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8419CD9121E48E3800A67558 /* AllSuggestionsCell.xib */; };
+		8419CD9521E4946F00A67558 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419CD9421E4946F00A67558 /* UIColorExtension.swift */; };
+		8419CD9721E4964000A67558 /* centerAlignedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419CD9621E4964000A67558 /* centerAlignedFlowLayout.swift */; };
+		8419CD9921E4C75F00A67558 /* ConfirmDataSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419CD9821E4C75F00A67558 /* ConfirmDataSave.swift */; };
+		8419CD9B21E4D36200A67558 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419CD9A21E4D36200A67558 /* Signup.swift */; };
 		84CE4F9321E314A500346B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4F9221E314A500346B95 /* AppDelegate.swift */; };
 		84CE4F9521E314A500346B95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4F9421E314A500346B95 /* ViewController.swift */; };
 		84CE4F9821E314A500346B95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CE4F9621E314A500346B95 /* Main.storyboard */; };
@@ -14,6 +21,19 @@
 		84CE4F9D21E314A600346B95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CE4F9B21E314A600346B95 /* LaunchScreen.storyboard */; };
 		84CE4FA821E314A600346B95 /* ChatBotAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FA721E314A600346B95 /* ChatBotAppTests.swift */; };
 		84CE4FB321E314A600346B95 /* ChatBotAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FB221E314A600346B95 /* ChatBotAppUITests.swift */; };
+		84CE4FC221E315F700346B95 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FC021E315F700346B95 /* ChatViewController.swift */; };
+		84CE4FC321E315F700346B95 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CE4FC121E315F700346B95 /* ChatViewController.xib */; };
+		84CE4FC621E31BD400346B95 /* BotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FC421E31BD400346B95 /* BotCell.swift */; };
+		84CE4FC721E31BD400346B95 /* BotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CE4FC521E31BD400346B95 /* BotCell.xib */; };
+		84CE4FCA21E31FEF00346B95 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FC821E31FEF00346B95 /* UserCell.swift */; };
+		84CE4FCB21E31FEF00346B95 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CE4FC921E31FEF00346B95 /* UserCell.xib */; };
+		84CE4FCD21E3235C00346B95 /* SpringLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FCC21E3235C00346B95 /* SpringLayout.swift */; };
+		84CE4FCF21E3371300346B95 /* ChatBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FCE21E3371300346B95 /* ChatBrain.swift */; };
+		84CE4FD121E338B900346B95 /* ChatEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FD021E338B900346B95 /* ChatEngine.swift */; };
+		84CE4FD421E3434A00346B95 /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FD221E3434A00346B95 /* SuggestionCell.swift */; };
+		84CE4FD521E3434A00346B95 /* SuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CE4FD321E3434A00346B95 /* SuggestionCell.xib */; };
+		84CE4FD921E36FB700346B95 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FD821E36FB700346B95 /* Login.swift */; };
+		84CE4FDB21E37A2900346B95 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE4FDA21E37A2900346B95 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8419CD8E21E46E1D00A67558 /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		8419CD9021E48E3800A67558 /* AllSuggestionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSuggestionsCell.swift; sourceTree = "<group>"; };
+		8419CD9121E48E3800A67558 /* AllSuggestionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllSuggestionsCell.xib; sourceTree = "<group>"; };
+		8419CD9421E4946F00A67558 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		8419CD9621E4964000A67558 /* centerAlignedFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = centerAlignedFlowLayout.swift; sourceTree = "<group>"; };
+		8419CD9821E4C75F00A67558 /* ConfirmDataSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDataSave.swift; sourceTree = "<group>"; };
+		8419CD9A21E4D36200A67558 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		84CE4F8F21E314A500346B95 /* ChatBotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CE4F9221E314A500346B95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CE4F9421E314A500346B95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +74,19 @@
 		84CE4FAE21E314A600346B95 /* ChatBotAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatBotAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CE4FB221E314A600346B95 /* ChatBotAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotAppUITests.swift; sourceTree = "<group>"; };
 		84CE4FB421E314A600346B95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CE4FC021E315F700346B95 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		84CE4FC121E315F700346B95 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		84CE4FC421E31BD400346B95 /* BotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotCell.swift; sourceTree = "<group>"; };
+		84CE4FC521E31BD400346B95 /* BotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotCell.xib; sourceTree = "<group>"; };
+		84CE4FC821E31FEF00346B95 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		84CE4FC921E31FEF00346B95 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		84CE4FCC21E3235C00346B95 /* SpringLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringLayout.swift; sourceTree = "<group>"; };
+		84CE4FCE21E3371300346B95 /* ChatBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBrain.swift; sourceTree = "<group>"; };
+		84CE4FD021E338B900346B95 /* ChatEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEngine.swift; sourceTree = "<group>"; };
+		84CE4FD221E3434A00346B95 /* SuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
+		84CE4FD321E3434A00346B95 /* SuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
+		84CE4FD821E36FB700346B95 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		84CE4FDA21E37A2900346B95 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +140,26 @@
 				84CE4F9221E314A500346B95 /* AppDelegate.swift */,
 				84CE4F9421E314A500346B95 /* ViewController.swift */,
 				84CE4F9621E314A500346B95 /* Main.storyboard */,
+				84CE4FCC21E3235C00346B95 /* SpringLayout.swift */,
+				8419CD9821E4C75F00A67558 /* ConfirmDataSave.swift */,
+				84CE4FCE21E3371300346B95 /* ChatBrain.swift */,
+				84CE4FD021E338B900346B95 /* ChatEngine.swift */,
+				84CE4FC021E315F700346B95 /* ChatViewController.swift */,
+				84CE4FC121E315F700346B95 /* ChatViewController.xib */,
+				84CE4FD821E36FB700346B95 /* Login.swift */,
+				8419CD9A21E4D36200A67558 /* Signup.swift */,
+				84CE4FD221E3434A00346B95 /* SuggestionCell.swift */,
+				84CE4FD321E3434A00346B95 /* SuggestionCell.xib */,
+				84CE4FC421E31BD400346B95 /* BotCell.swift */,
+				84CE4FC521E31BD400346B95 /* BotCell.xib */,
+				84CE4FC821E31FEF00346B95 /* UserCell.swift */,
+				84CE4FC921E31FEF00346B95 /* UserCell.xib */,
+				8419CD9021E48E3800A67558 /* AllSuggestionsCell.swift */,
+				8419CD9121E48E3800A67558 /* AllSuggestionsCell.xib */,
+				84CE4FDA21E37A2900346B95 /* UIView+Extension.swift */,
+				8419CD8E21E46E1D00A67558 /* NunitoSans-SemiBold.ttf */,
+				8419CD9421E4946F00A67558 /* UIColorExtension.swift */,
+				8419CD9621E4964000A67558 /* centerAlignedFlowLayout.swift */,
 				84CE4F9921E314A600346B95 /* Assets.xcassets */,
 				84CE4F9B21E314A600346B95 /* LaunchScreen.storyboard */,
 				84CE4F9E21E314A600346B95 /* Info.plist */,
@@ -230,7 +290,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CE4F9D21E314A600346B95 /* LaunchScreen.storyboard in Resources */,
+				8419CD8F21E46E1D00A67558 /* NunitoSans-SemiBold.ttf in Resources */,
+				84CE4FD521E3434A00346B95 /* SuggestionCell.xib in Resources */,
+				84CE4FC721E31BD400346B95 /* BotCell.xib in Resources */,
+				84CE4FCB21E31FEF00346B95 /* UserCell.xib in Resources */,
 				84CE4F9A21E314A600346B95 /* Assets.xcassets in Resources */,
+				8419CD9321E48E3800A67558 /* AllSuggestionsCell.xib in Resources */,
+				84CE4FC321E315F700346B95 /* ChatViewController.xib in Resources */,
 				84CE4F9821E314A500346B95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,7 +322,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CE4FDB21E37A2900346B95 /* UIView+Extension.swift in Sources */,
 				84CE4F9521E314A500346B95 /* ViewController.swift in Sources */,
+				84CE4FD921E36FB700346B95 /* Login.swift in Sources */,
+				84CE4FD121E338B900346B95 /* ChatEngine.swift in Sources */,
+				84CE4FC621E31BD400346B95 /* BotCell.swift in Sources */,
+				84CE4FD421E3434A00346B95 /* SuggestionCell.swift in Sources */,
+				8419CD9521E4946F00A67558 /* UIColorExtension.swift in Sources */,
+				84CE4FCF21E3371300346B95 /* ChatBrain.swift in Sources */,
+				8419CD9221E48E3800A67558 /* AllSuggestionsCell.swift in Sources */,
+				8419CD9721E4964000A67558 /* centerAlignedFlowLayout.swift in Sources */,
+				84CE4FC221E315F700346B95 /* ChatViewController.swift in Sources */,
+				8419CD9921E4C75F00A67558 /* ConfirmDataSave.swift in Sources */,
+				84CE4FCA21E31FEF00346B95 /* UserCell.swift in Sources */,
+				8419CD9B21E4D36200A67558 /* Signup.swift in Sources */,
+				84CE4FCD21E3235C00346B95 /* SpringLayout.swift in Sources */,
 				84CE4F9321E314A500346B95 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

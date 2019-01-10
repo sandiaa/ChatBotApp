@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="ChatBotApp" customModuleProvider="target">
+            <connections>
+                <outlet property="chatCollectionView" destination="vsF-e6-uri" id="VXl-ff-6CO"/>
+                <outlet property="inputTextField" destination="6OE-hk-6t1" id="sCK-4M-DrW"/>
+                <outlet property="lcChatBottomSpace" destination="XdO-bp-tS0" id="s4x-10-VVf"/>
+                <outlet property="messageInputContainerView" destination="aTI-rO-Qcf" id="vyr-fI-acz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9W-E0-TKn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChatBot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6g-6h-L9R">
+                            <rect key="frame" x="100" y="48" width="175" height="24"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="Ct4-Dj-Iml"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="hQf-De-ktm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.88441780821917804" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="W6g-6h-L9R" firstAttribute="leading" secondItem="C9W-E0-TKn" secondAttribute="leading" constant="100" id="IyI-x9-rXG"/>
+                        <constraint firstAttribute="height" constant="86" id="RDC-sK-a7f"/>
+                        <constraint firstAttribute="trailing" secondItem="W6g-6h-L9R" secondAttribute="trailing" constant="100" id="Wsp-I3-5bl"/>
+                        <constraint firstAttribute="bottom" secondItem="W6g-6h-L9R" secondAttribute="bottom" constant="14" id="a9t-2k-Shx"/>
+                        <constraint firstItem="W6g-6h-L9R" firstAttribute="top" secondItem="C9W-E0-TKn" secondAttribute="top" constant="48" id="fY5-TV-8e8"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vsF-e6-uri">
+                    <rect key="frame" x="0.0" y="86" width="375" height="426"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nZc-Is-xa9">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTI-rO-Qcf">
+                    <rect key="frame" x="0.0" y="512" width="375" height="100"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OE-hk-6t1">
+                            <rect key="frame" x="10" y="0.0" width="355" height="100"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="FfI-xr-PRy"/>
+                        <constraint firstItem="6OE-hk-6t1" firstAttribute="top" secondItem="aTI-rO-Qcf" secondAttribute="top" id="NPI-0T-nnD"/>
+                        <constraint firstItem="6OE-hk-6t1" firstAttribute="leading" secondItem="aTI-rO-Qcf" secondAttribute="leading" constant="10" id="eOt-yV-pPI"/>
+                        <constraint firstAttribute="bottom" secondItem="6OE-hk-6t1" secondAttribute="bottom" id="eh4-Mq-dPs"/>
+                        <constraint firstAttribute="trailing" secondItem="6OE-hk-6t1" secondAttribute="trailing" constant="10" id="tpx-bG-rwQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="C9W-E0-TKn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BBD-Xb-mYp"/>
+                <constraint firstItem="C9W-E0-TKn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="BDL-KO-0bD"/>
+                <constraint firstAttribute="trailing" secondItem="aTI-rO-Qcf" secondAttribute="trailing" id="R5H-zl-Wrg"/>
+                <constraint firstItem="vsF-e6-uri" firstAttribute="top" secondItem="C9W-E0-TKn" secondAttribute="bottom" id="US3-p7-pmP"/>
+                <constraint firstItem="aTI-rO-Qcf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UcZ-FX-2N2"/>
+                <constraint firstItem="C9W-E0-TKn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W4F-lP-egn"/>
+                <constraint firstAttribute="bottom" secondItem="vsF-e6-uri" secondAttribute="bottom" constant="300" id="XdO-bp-tS0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vsF-e6-uri" secondAttribute="trailing" id="a0O-8y-Ob1"/>
+                <constraint firstItem="vsF-e6-uri" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cmR-rN-aed"/>
+                <constraint firstItem="aTI-rO-Qcf" firstAttribute="top" secondItem="vsF-e6-uri" secondAttribute="bottom" id="og3-6O-x8y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="39.90147783251232"/>
+        </view>
+    </objects>
+</document>
