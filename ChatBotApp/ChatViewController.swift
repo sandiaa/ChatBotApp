@@ -13,15 +13,23 @@ class ChatViewController: UIViewController , UICollectionViewDelegate, UICollect
     @IBOutlet weak var chatCollectionView: UICollectionView!
     @IBOutlet weak var messageInputContainerView: UIView!
     @IBOutlet weak var inputTextField: UITextField!
+
     
     let chatEngine = ChatEngine()
     var userSuggestions = [Chat]()
     
     var isShowingSuggestions = false
     var latestSuggestion:Chat?
+    var sug:Chat?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        inputTextField.layer.cornerRadius = 15
+        inputTextField.layer.borderColor = UIColor.black.cgColor
+        inputTextField.layer.borderWidth = 1.0
+        inputTextField.returnKeyType = .done
+        
         chatEngine.delegate = self
         chatEngine.startOnboarding()
         setupChatCollectionView()
@@ -45,9 +53,7 @@ class ChatViewController: UIViewController , UICollectionViewDelegate, UICollect
         NotificationCenter.default.removeObserver(self)
     }
     func observeKeyboard() {
-        
-        setupInputComponents()
-        tapOutside()
+      tapOutside()
     }
     
     @objc private func keyboardWillChangeFrame(_ notification: Notification) {
@@ -58,6 +64,7 @@ class ChatViewController: UIViewController , UICollectionViewDelegate, UICollect
         }
         else {//Keyboard is visible
             lcChatBottomSpace.constant = endFrame.height + 100
+            
         }
         view.layoutIfNeeded()
     }
@@ -164,21 +171,17 @@ class ChatViewController: UIViewController , UICollectionViewDelegate, UICollect
         }) { (finished) in
         }
     }
-    @objc func keyboardWillChange(notification : NSNotification){
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            return
-        }
-        if notification.name == UIResponder.keyboardWillShowNotification  {
-            view.frame.origin.y = -keyboardSize.height
-        }
-        else {
-            view.frame.origin.y = 0
-        }
-    }
-    
-    func setupInputComponents() {
-        
-    }
+//    @objc func keyboardWillChange(notification : NSNotification){
+//        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+//            return
+//        }
+//        if notification.name == UIResponder.keyboardWillShowNotification  {
+//            view.frame.origin.y = -keyboardSize.height
+//        }
+//        else {
+//            view.frame.origin.y = 0
+//        }
+//    }
     
     func tapOutside() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -187,12 +190,13 @@ class ChatViewController: UIViewController , UICollectionViewDelegate, UICollect
     @objc func handleTap(){
         inputTextField.resignFirstResponder()
         
-        
-    }
+        }
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
+        let text = inputTextField.text
+        sug?.chatMessage = text
+        chatEngine.userEnteredText(chat1: sug!)
         inputTextField.text = ""
         inputTextField.resignFirstResponder()
         return true
@@ -202,13 +206,13 @@ class ChatViewController: UIViewController , UICollectionViewDelegate, UICollect
 
 
 extension ChatViewController: ChatEngineDelegate {
-    func showKeyboard() {
+    func showKeyboard(sugg: [Chat]) {
+        sug = sugg[0]
         isShowingSuggestions = false
         observeKeyboard()
         inputTextField.becomeFirstResponder()
     }
-    
-    
+
     func showSuggestions(suggestions: [Chat]) {
         
         isShowingSuggestions = true
@@ -217,7 +221,7 @@ extension ChatViewController: ChatEngineDelegate {
     }
     
     func didAddNewChat() {
-        
+//        if chatEngine.chatHistory[chatEngine.chatHistory.count-1].chatMessage != "" {
         let newIndexPath = IndexPath(row: chatEngine.chatHistory.count-1, section: 0)
         (self.chatCollectionView.collectionViewLayout as! SpringyFlowLayout).dynamicAnimator = nil
         
@@ -227,6 +231,6 @@ extension ChatViewController: ChatEngineDelegate {
             self.chatCollectionView.scrollToItem(at: newIndexPath, at: .bottom, animated: true)
         }
     }
-    
+//    }
   
 }

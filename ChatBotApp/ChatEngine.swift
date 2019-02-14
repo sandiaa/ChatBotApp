@@ -11,7 +11,7 @@ import UIKit
 
 protocol ChatEngineDelegate:class {
     func showSuggestions(suggestions:[Chat])
-    func showKeyboard()
+    func showKeyboard(sugg: [Chat])
     func didAddNewChat()
 }
 
@@ -51,14 +51,14 @@ class ChatEngine {
         }
         
         let newSuggestions  = getResponsesFromUser()
+        if newSuggestions[0].chatMessage == "" {
+            delegate?.showKeyboard(sugg: newSuggestions)
+        }
         
-        if newSuggestions[0].chatMessage != ""  {
+        else if newSuggestions[0].chatMessage != ""  {
             delegate?.showSuggestions(suggestions: newSuggestions)
         }
-        else if newSuggestions[0].chatMessage == "" {
-            delegate?.showKeyboard()
-        }
-        
+     
     }
     
     
@@ -81,20 +81,27 @@ class ChatEngine {
     
     func getResponsesFromUser()->[Chat] {
         var suggestionMessage = [Chat]()
-        if let count = brain.suggestionMessage(index: getResponseId()) {
-            for (key,value) in count {
+      
+        //if
+            let count = brain.suggestionMessage(index: getResponseId())
+       // let c = brain.suggestionMessage(index: getResponseId())
+        for (key,value) in count! {
                 suggestionMessage.append(Chat(index: getNextIndex(), responseId: key, chatMessage: value, image: nil, chatType: .user))
-                
-
             }
             return suggestionMessage
-        }
-        return []
     }
     
     func newSuggestionSelected(suggestion:Chat) {
         chatHistory.append(suggestion)
         delegate?.didAddNewChat()
+    }
+    
+    func userEnteredText(chat1 : Chat){
+   
+        chatHistory.append(chat1)
+        
+        delegate?.didAddNewChat()
+        askQuestionToUser()
     }
 }
 
@@ -102,7 +109,7 @@ class ChatEngine {
 struct Chat {
     let index:Int
     let responseId : Int
-    let chatMessage:String?
+    var chatMessage:String?
     let image:UIImage?
     let chatType:ChatType
    // let keyboardInfo:KeyBoardInfo?
@@ -116,6 +123,7 @@ extension ChatEngine : ChatBrainDelegate {
     func getLastIndex() -> String? {
         let newIndexPath = chatHistory.count-1
         let messageId = chatHistory[newIndexPath]
+        print(messageId)
         return messageId.chatMessage
     }
     

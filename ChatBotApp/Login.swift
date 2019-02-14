@@ -12,30 +12,34 @@ import UIKit
 
 class Login {
     
-    var isUser = false
-    var emailValidated = false
-    var didLogin = false
-    var str = ""
+ //   var isUser = false
+//    init() {
+//        var emailValidated = false
+//        var didLogin = false
+//    }
+//   
+ //   var str = ""
     
     
     
     func validateEmailSignin(email : String) -> Bool {
-        if emailValidated {
+     //   if emailValidated {
             return true
             
-        }
-        else {
-            return false
-        }
+       // }
+   //     else {
+     //       return false
+      //  }
         
     }
     func didLogin(email :String, password : String) -> Bool {
-        if didLogin {
-            return true
-        }
-        else {
-            return false
-        }
+      //  if didLogin {
+       
+        return true
+       // }
+      //  else {
+      //      return false
+       // }
     }
     
         

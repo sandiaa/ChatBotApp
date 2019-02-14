@@ -48,7 +48,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vsF-e6-uri">
-                    <rect key="frame" x="0.0" y="86" width="375" height="426"/>
+                    <rect key="frame" x="0.0" y="86" width="375" height="726"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nZc-Is-xa9">
                         <size key="itemSize" width="50" height="50"/>
@@ -58,16 +58,17 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTI-rO-Qcf">
-                    <rect key="frame" x="0.0" y="512" width="375" height="100"/>
+                    <rect key="frame" x="0.0" y="812" width="375" height="100"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OE-hk-6t1">
                             <rect key="frame" x="10" y="0.0" width="355" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="FfI-xr-PRy"/>
                         <constraint firstItem="6OE-hk-6t1" firstAttribute="top" secondItem="aTI-rO-Qcf" secondAttribute="top" id="NPI-0T-nnD"/>
@@ -85,7 +86,7 @@
                 <constraint firstItem="vsF-e6-uri" firstAttribute="top" secondItem="C9W-E0-TKn" secondAttribute="bottom" id="US3-p7-pmP"/>
                 <constraint firstItem="aTI-rO-Qcf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UcZ-FX-2N2"/>
                 <constraint firstItem="C9W-E0-TKn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W4F-lP-egn"/>
-                <constraint firstAttribute="bottom" secondItem="vsF-e6-uri" secondAttribute="bottom" constant="300" id="XdO-bp-tS0"/>
+                <constraint firstAttribute="bottom" secondItem="vsF-e6-uri" secondAttribute="bottom" id="XdO-bp-tS0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vsF-e6-uri" secondAttribute="trailing" id="a0O-8y-Ob1"/>
                 <constraint firstItem="vsF-e6-uri" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cmR-rN-aed"/>
                 <constraint firstItem="aTI-rO-Qcf" firstAttribute="top" secondItem="vsF-e6-uri" secondAttribute="bottom" id="og3-6O-x8y"/>

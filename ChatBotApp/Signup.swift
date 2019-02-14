@@ -11,41 +11,41 @@ import UIKit
 
 class SignUp {
     
-    var isUser = false
-    var nameValidated = false
-    var emailValidated = false
-    var passwordValidated = false
-    var didSignup = false
-    var str = ""
+//    var isUser = false
+//    var nameValidated = true
+//    var emailValidated = false
+//    var passwordValidated = false
+//    var didSignup = false
+//    var str = ""
     
     func validateNameSignup(name : String) -> Bool {
-        if nameValidated {
+      //  if nameValidated {
             return true
             
-        }
-        else {
-            return false
-        }
+       // }
+       // else {
+        //    return false
+      //  }
         
     }
     func validateEmailSignup(email : String) -> Bool {
-        if emailValidated {
+     //   if emailValidated {
             return true
             
-        }
-        else {
-            return false
-        }
+     //   }
+      //  else {
+     //       return false
+      //  }
         
     }
     
     func didSignup(name: String, email : String, password : String) -> Bool {
-        if didSignup {
+     //   if didSignup {
             return true
-            }
-        else {
-            return false
-        }
+     //       }
+      //  else {
+      //      return false
+      //  }
     }
     
 }
